@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image'; 
+import Image from 'next/image';
 
 const Hero = () => {
   const images = [
@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-  
+
       <motion.div
         className="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/60 to-transparent"
         initial={{ opacity: 0 }}
@@ -45,8 +45,8 @@ const Hero = () => {
               alt={image.alt}
               layout="fill"
               objectFit="cover"
-              priority={index === 0} 
-              quality={75} 
+              priority={index === 0}
+              quality={75}
             />
           </motion.div>
         ))}
@@ -64,7 +64,7 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Fitness Club.
+          Inovetta Fitness.
         </motion.h1>
         <motion.p
           className="text-lg md:text-2xl max-w-2xl mx-auto mb-8"
@@ -72,7 +72,7 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Transformez votre corps, votre esprit et votre vie.
+          Transform your body, your mind, and your life.
         </motion.p>
         <motion.a
           href="#join"
@@ -80,7 +80,7 @@ const Hero = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          Rejoignez-nous
+          Join us
         </motion.a>
       </motion.div>
     </section>

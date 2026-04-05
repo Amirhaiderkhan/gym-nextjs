@@ -15,11 +15,11 @@ const AboutUs = () => {
           transition={{ duration: 1 }}
         >
           <div className="lg:w-1/2">
-            <Image 
-              src="/images/fitness1.jpg" 
-              alt="Salle de sport"
-              width={600} 
-              height={400} 
+            <Image
+              src="/images/fitness1.jpg"
+              alt="Gym"
+              width={600}
+              height={400}
               className="w-full h-full object-cover transform transition duration-500 hover:scale-105"
             />
           </div>
@@ -30,7 +30,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              À propos de notre salle de sport
+              About Our Gym
             </motion.h2>
             <motion.p
               className="text-lg leading-relaxed"
@@ -38,7 +38,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Nous offrons une expérience de fitness moderne et motivante. Que vous soyez débutant ou confirmé, notre salle de sport est équipée pour répondre à tous vos besoins d'entraînement.
+              We offer a modern and motivating fitness experience. Whether you are a beginner or an advanced athlete, our gym is fully equipped to meet all your training needs.
             </motion.p>
             <motion.p
               className="text-lg leading-relaxed"
@@ -46,7 +46,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Rejoignez notre communauté et bénéficiez de l'accompagnement de nos entraîneurs qualifiés pour atteindre vos objectifs.
+              Join our community and benefit from the guidance of our qualified trainers to achieve your goals.
             </motion.p>
           </div>
         </motion.div>
@@ -65,7 +65,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Nos valeurs et notre approche
+              Our Values and Approach
             </motion.h2>
             <motion.p
               className="text-lg leading-relaxed"
@@ -73,7 +73,7 @@ const AboutUs = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Chez nous, chaque membre est une priorité. Nous offrons des programmes d'entraînement personnalisés et une ambiance conviviale pour vous permettre de vous surpasser.
+              With us, every member is a priority. We offer personalized training programs and a friendly atmosphere to help you push your limits.
             </motion.p>
             <motion.p
               className="text-lg leading-relaxed"
@@ -81,15 +81,15 @@ const AboutUs = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Notre équipe est là pour vous guider et vous motiver, dans un espace équipé avec des machines de haute qualité.
+              Our team is here to guide and motivate you in a space equipped with high-quality machines.
             </motion.p>
           </div>
           <div className="lg:w-1/2">
-            <Image 
-              src="/images/fitness2.jpg" 
-              alt="Équipement de gym" 
-              width={600} 
-              height={400} 
+            <Image
+              src="/images/fitness2.jpg"
+              alt="Gym Equipment"
+              width={600}
+              height={400}
               className="w-full h-full object-cover transform transition duration-500 hover:scale-105"
             />
           </div>

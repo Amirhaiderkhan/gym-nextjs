@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaApple } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Contact = () => {
@@ -21,17 +21,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Formulaire soumis !");
+    alert("Form submitted!");
   };
 
   const containerVariants = {
     initial: { opacity: 0 },
-    animate: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, 
-      },
-    },
+    animate: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
   const cardVariants = {
@@ -42,50 +37,62 @@ const Contact = () => {
   return (
     <section id="contact" className="bg-black text-white py-16 px-6 lg:px-48">
       <div className="container mx-auto space-y-16">
-        
+
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="initial"
-          whileInView="animate"  
-          viewport={{ once: false, amount: 0.3 }} 
+          whileInView="animate"
+          viewport={{ once: false, amount: 0.3 }}
         >
           {[
-            { icon: <FaPhoneAlt />, text: "+213 123 456 789" },
-            { icon: <FaEnvelope />, text: "contact@gym-next.com" },
-            { icon: <FaMapMarkerAlt />, text: "123 Rue de la Salle, Alger, Algérie" },
-            { icon: <FaGlobe />, text: "gym-nextjs-amina.vercel.app" },
+            { icon: <FaPhoneAlt />, text: "+923 428 970 212" },
+            { icon: <FaEnvelope />, text: "contact@inovetta.com" },
+            { icon: <FaMapMarkerAlt />, text: "Ring Road Meer Afzaal Plaza MMC Peshawar, Pakistan" },
+            {
+              icon: <FaApple />, 
+              text: "Download App",
+              link: "https://apps.apple.com/pl/app/inovetta-fitness/id6736566126"
+            }
           ].map((card, index) => (
             <motion.div
               key={index}
               className="group bg-gray-800 p-6 rounded-lg shadow-lg transition duration-300 hover:bg-yellow-500"
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.8 }}  
+              transition={{ duration: 0.8 }}
             >
-              <div className="flex items-center space-x-4">
-                <div className="text-4xl text-yellow-500 group-hover:text-white transition duration-300">
-                  {card.icon}
+              {card.link ? (
+                <a href={card.link} download className="flex items-center space-x-4">
+                  <div className="text-4xl text-yellow-500 group-hover:text-white transition duration-300">
+                    {card.icon}
+                  </div>
+                  <p className="text-lg">{card.text}</p>
+                </a>
+              ) : (
+                <div className="flex items-center space-x-4">
+                  <div className="text-4xl text-yellow-500 group-hover:text-white transition duration-300">
+                    {card.icon}
+                  </div>
+                  <p className="text-lg">{card.text}</p>
                 </div>
-                <p className="text-lg">{card.text}</p>
-              </div>
+              )}
             </motion.div>
           ))}
         </motion.div>
 
- 
         <motion.div
           className="flex flex-col lg:flex-row items-center justify-between lg:px-12 space-y-8 lg:space-y-0 lg:space-x-12"
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}  
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 1 }}
         >
           <div className="lg:w-1/2 space-y-6">
-            <h2 className="text-4xl font-extrabold text-yellow-500">Contactez-nous</h2>
+            <h2 className="text-4xl font-extrabold text-yellow-500">Contact Us</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-lg font-medium">Nom</label>
+                <label htmlFor="name" className="block text-lg font-medium">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -126,7 +133,7 @@ const Contact = () => {
                   className="bg-yellow-500 text-black py-3 px-6 text-lg font-semibold transform transition duration-300 hover:scale-105"
                   whileHover={{ scale: 1.1 }}
                 >
-                  Envoyer
+                  Send
                 </motion.button>
               </div>
             </form>

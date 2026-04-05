@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <Schedule/>
+      {/* <Schedule/> */}
       <About />
-      <Pricing/>
-      <CTA/>
+      <Pricing />
+      <CTA />
       <Contact />
     </div>
   );

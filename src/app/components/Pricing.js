@@ -6,27 +6,27 @@ import { FaCheckCircle } from 'react-icons/fa';
 const Pricing = () => {
   const plans = [
     {
-      title: "Cours Collectifs (60 min)",
+      title: "Group Classes (60 min)",
       prices: [
-        { frequency: "1 fois/semaine", price: "2,800 DA" },
-        { frequency: "2 fois/semaine", price: "4,000 DA" },
-        { frequency: "Forfait annuel", price: "28,600 DA" },
+        { frequency: "Once a week", price: "2,800 PKR" },
+        { frequency: "Twice a week", price: "4,000 PKR" },
+        { frequency: "Annual Pass", price: "28,600 PKR" },
       ],
     },
     {
-      title: "Cardio/Musculation (90 min)",
+      title: "Cardio/Strength Training (90 min)",
       prices: [
-        { frequency: "3 fois/semaine", price: "12,800 DA" },
-        { frequency: "Forfait mensuel", price: "10,000 DA" },
-        { frequency: "Forfait annuel", price: "54,000 DA" },
+        { frequency: "3 times a week", price: "12,800 PKR" },
+        { frequency: "Monthly Pass", price: "10,000 PKR" },
+        { frequency: "Annual Pass", price: "54,000 PKR" },
       ],
     },
     {
-      title: "Tarifs Enfants",
+      title: "Kids Pricing",
       prices: [
-        { frequency: "1 fois/semaine", price: "2,000 DA" },
-        { frequency: "2 fois/semaine", price: "2,800 DA" },
-        { frequency: "3 fois/semaine", price: "3,500 DA" },
+        { frequency: "Once a week", price: "2,000 PKR" },
+        { frequency: "Twice a week", price: "2,800 PKR" },
+        { frequency: "3 times a week", price: "3,500 PKR" },
       ],
     },
   ];
@@ -45,7 +45,7 @@ const Pricing = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        Tarifs
+        Pricing
       </motion.h1>
       <motion.div
         className="grid gap-8 md:grid-cols-3 w-full max-w-6xl px-4"
@@ -75,7 +75,7 @@ const Pricing = () => {
               className="bg-yellow-400 text-black text-center py-3 font-semibold cursor-pointer hover:bg-yellow-500 transition"
               whileHover={{ scale: 1.05 }}
             >
-              S'inscrire
+              Join Now
             </motion.div>
           </motion.div>
         ))}
